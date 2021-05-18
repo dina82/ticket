@@ -1,0 +1,145 @@
+:root {
+    --background: #000;
+    --dispFlex: flex;
+    --color1: #fff;
+    --color2: #848484;
+    --color3: rgb(240, 56, 163);
+    --color4: rgb(250, 247, 77);
+    --color5: rgb(56, 203, 248);
+}
+
+body {
+    background: var(--background);
+    color: var(--color1);
+    FONT-FAMILY: sans-serif;
+    box-sizing: border-box;
+    font-size: 16px;
+}
+
+.container {
+    /* background: linear-gradient(90deg, var(--color3) -13%, var(--color4) 74%,var(--color5) 102% ); */
+    background: linear-gradient(90deg, var(--color3) -13%, var(--color4) 60%, var(--color5) 90%);
+    width: 650px;
+    padding: 5px;
+    margin: 150px auto;
+    border-radius: 15px;
+    transform: translateY(-38px);
+    position: relative;
+}
+
+.container::before {
+    border: 5px solid var(--color5);
+    transform: translateX(32px);
+    right: 0;
+}
+.container::after {
+    border: 5px solid var(--color3);
+    transform: translateX(-32px);
+    left: 0;
+}
+.container::before ,
+.container::after {
+    content: "";
+    width: 55px;
+    height: 55px;
+    border-radius: 50%;
+    position: absolute;
+    top: 40%;
+    background: var(--background);
+}
+.left{
+    left: -70px;
+    
+}
+.right{
+    right: 0;
+    transform: translateX(70px);
+}
+
+.right,
+.left{
+    width: 70px;
+    height: 70px;
+    position: absolute;
+    top: 40%;
+    background: var(--background);
+    z-index: 1;
+}
+.ticket_wrapper {
+    background: var(--background);
+    border-radius: 15px;
+}
+
+.ticket-content__wrapper {
+    position: relative;
+    display: flex;
+}
+
+.ticket-left--side {
+    border-right: 2px dashed rgb(46 45 45);
+    padding: 40px 35px 40px 50px;
+}
+
+.user-info {
+    display: var(--dispFlex);
+    margin: 0 0 2rem .7rem;
+}
+
+.user-info img {
+    border-radius: 50%;
+    width: 90px;
+    height: 90px;
+}
+
+.user-info a {
+    text-decoration: none;
+    color: var(--color2);
+    font-size: 22px
+}
+
+h1 {
+    margin: 10px 0;
+}
+
+.user-name {
+    margin-left: 15px
+}
+
+.logo img {
+    width: 108%
+}
+
+.logo p {
+    margin: 0;
+    /* font-size: 16px */
+}
+
+.logo span::before {
+    display: inline-block;
+    font-family: 'FontAwesome';
+    content: '';
+    border-left: 9px solid transparent;
+    border-bottom: 15px solid;
+    border-right: 9px solid transparent;
+}
+
+.ticket-right--side {
+    text-align: center;
+    font-weight: 600;
+    font-size: 2.5rem;
+    text-orientation: sideways;
+    writing-mode: tb-rl;
+    margin-left: 30px;
+}
+
+.ticket-right--side h2 {
+    /* 
+    width: 350px;
+    transform-origin: bottom right;
+    padding-bottom: 35px; */
+}
+
+/* .ticket-right--side h2 {
+    text-orientation: mixed;
+    writing-mode: tb-rl;
+} */
